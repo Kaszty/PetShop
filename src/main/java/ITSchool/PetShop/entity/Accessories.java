@@ -1,7 +1,6 @@
 package ITSchool.PetShop.entity;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @Setter

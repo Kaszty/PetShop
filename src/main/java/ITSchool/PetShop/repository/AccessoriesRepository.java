@@ -1,49 +1,19 @@
 package ITSchool.PetShop.repository;
 
 import ITSchool.PetShop.entity.Accessories;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-public class AccessoriesRepository {
+@Repository
+public interface AccessoriesRepository extends CrudRepository<Accessories, Long> {
 
-    private List<Accessories> accessories = new ArrayList<>();
-
-    public List<Accessories> getAllAccessories() {
-        System.out.println("Getting all accessories");
-        return this.accessories;
-    }
-
-    public void addAccessories(Accessories accessories) {
-        this.accessories.add(accessories);
-        System.out.println("Added a new accessory: " + accessories);
-    }
-
-    public Accessories getAllAccessoriesById(int id) {
-        return getAccessories(id);
-    }
-
-    public void deleteAccessories(int id) {
-        Accessories accessories = getAccessories(id);
-        System.out.println("Deleting accessory: " + accessories);
-        this.accessories.remove(accessories);
-    }
-
-    public void updateAccessories(int id, Accessories accessories) {
-        Accessories oldAccessories = getAccessories(id);
-        System.out.println("Updating accessory: " + accessories);
-        System.out.println("New accessory: " + accessories);
-        this.accessories.set(this.accessories.indexOf(oldAccessories), accessories);
-    }
-
-    private Accessories getAccessories(int id) {
-        System.out.println("Getting accessory with id: " + id);
-        for (Accessories accessories : this.accessories) {
-            if (accessories.getId()== id)
-                return accessories;
-        }
-        return null;
-    }
-
+    @Transactional
+    @Modifying
+    @Query("update Accessories a set a.name = ?1 where a.id = ?2")
+    void update(String name, Long id);
 }
 
 
