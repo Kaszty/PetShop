@@ -1,0 +1,24 @@
+2022-02-07 01:19:00,190 INFO o.s.b.StartupInfoLogger [restartedMain] Starting PetShopApplication using Java 17.0.1 on Csabi with PID 30024 (D:\IT School\Proicete\PetShop\target\classes started by kaszt in D:\IT School\Proicete\PetShop)
+2022-02-07 01:19:00,194 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-02-07 01:19:00,220 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-07 01:19:00,221 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-07 01:19:00,660 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 01:19:00,690 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2022-02-07 01:19:01,052 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-02-07 01:19:01,059 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-02-07 01:19:01,060 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-02-07 01:19:01,060 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 01:19:01,107 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-02-07 01:19:01,108 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 885 ms
+2022-02-07 01:19:01,412 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-02-07 01:19:01,493 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-02-07 01:19:01,932 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 01:19:02,190 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 01:19:02,384 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-02-07 01:19:02,394 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-02-07 01:19:02,430 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-07 01:19:02,438 INFO o.s.b.StartupInfoLogger [restartedMain] Started PetShopApplication in 2.497 seconds (JVM running for 3.001)
+2022-02-07 01:19:19,102 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 01:19:19,102 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-02-07 01:19:19,102 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2022-02-07 01:19:30,803 INFO I.P.r.AccessoriesRestController [http-nio-8080-exec-6] Getting all accessories
