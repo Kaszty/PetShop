@@ -1,16 +1,37 @@
 package ITSchool.PetShop.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import javax.persistence.*;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@Entity
+@Table(name = "Accessories")
 public class Accessories {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
     private String name;
+
+    @Column
+    private String colour;
+
+    @Column
+    private String petType;
+
+    @Column
+    private int price;
+
+    @Column
+    private String material;
+
+    @Column
+    private int weight;
 }

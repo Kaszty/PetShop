@@ -2,15 +2,11 @@ package ITSchool.PetShop.rest;
 
 import ITSchool.PetShop.entity.Accessories;
 import ITSchool.PetShop.repository.AccessoriesRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
-public class RestController {
+public class AccessoriesRestController {
 
     AccessoriesRepository accessoriesRepository = new AccessoriesRepository();
 
@@ -26,7 +22,16 @@ public class RestController {
 
     @PostMapping("/create-accessories")
     public void createAccessories(@RequestBody Accessories accessories){
-        accessoriesRepository.addAccesories(accessories);
+        accessoriesRepository.addAccessories(accessories);
     }
 
+    @DeleteMapping("/delete-accessories/{id}")
+    public void deleteAccessories(@PathVariable int id){
+        accessoriesRepository.deleteAccessories(id);
+    }
+
+    @PutMapping("/update-accessories/{id}")
+    public void updateAccessories(@PathVariable int id, @RequestBody Accessories accessories){
+        accessoriesRepository.updateAccessories(id, accessories);
+    }
 }
